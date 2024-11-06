@@ -149,16 +149,8 @@ def update_hosts_file(container_ips):
     os.makedirs(os.path.dirname(HOSTS_FILE), exist_ok=True)
     
     try:
-        # Write to temporary file first
-        temp_file = f"{HOSTS_FILE}.tmp"
         with open(HOSTS_FILE, 'w') as f:
             f.write(hosts_content)
-        
-        # Check file permissions
-        # os.chmod(temp_file, 0o644)
-        
-        # Atomic replace
-        # os.rename(temp_file, HOSTS_FILE)
         logging.info(f"Successfully updated {HOSTS_FILE}")
     except Exception as e:
         logging.error(f"Error writing hosts file: {e}")

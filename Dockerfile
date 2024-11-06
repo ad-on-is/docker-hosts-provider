@@ -1,7 +1,7 @@
 FROM python:3
-RUN apt update && apt install -y docker.io libglib2.0-dev libdbus-1-dev ca-certificates curl avahi-daemon
+RUN apt update && apt install -y docker.io
 
-RUN pip install docker dbus-python 
+RUN pip install docker
 
 COPY ./monitor.py /monitor.py
 
