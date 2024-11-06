@@ -81,6 +81,8 @@ To make it actually work, you need to tell your DNS-server (router, pihole, etc.
 
 If your LAN spans from 10.1.0.0 to 10.1.255.255, and CoreDNS runs on 10.1.0.2, this is what you'd do
 
+### dnsmasq.conf
+
 ```bash
 # this is just an example, adapt to your needs
 server=/1.10.in-addr.arpa/10.1.0.2
